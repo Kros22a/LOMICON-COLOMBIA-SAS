@@ -100,7 +100,8 @@ body {
     background-attachment: fixed;
     position: relative;
     padding: 0 3rem;
-    margin-top: 80px;
+    padding-top: 100px;
+    margin-top: 0;
 }
 
 .hero::before {
@@ -449,10 +450,12 @@ h2 {
         grid-template-columns: 1fr;
         gap: 3rem;
         text-align: center;
+        padding-top: 2rem;
     }
 
     .hero-content h2 {
-        font-size: 2.8rem;
+        font-size: 2.2rem;
+        line-height: 1.3;
     }
 
     .nav {
@@ -469,9 +472,18 @@ h2 {
         display: flex;
     }
 
+    .nav {
+        padding: 0.8rem 1.5rem;
+    }
+
+    .logo h1 {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
     .nav-links {
         position: fixed;
-        top: 80px;
+        top: 60px;
         left: -100%;
         flex-direction: column;
         background: rgba(26, 26, 26, 0.98);
@@ -487,19 +499,43 @@ h2 {
 
     .hero {
         padding: 0 1.5rem;
-        margin-top: 60px;
+        padding-top: 100px;
+        margin-top: 0;
+        min-height: auto;
+    }
+
+    .hero-container {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
     }
 
     .hero-content h2 {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
+        line-height: 1.3;
+        margin-top: 1rem;
     }
 
     .hero-content p {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 0.95rem;
     }
 
     h2 {
-        font-size: 2.2rem;
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .container {
+        padding: 3rem 1.5rem;
     }
 
     .products-grid,
@@ -507,110 +543,5 @@ h2 {
     .about-grid,
     .gallery-grid {
         grid-template-columns: 1fr;
-    }
-}
-
-/* Partners section */
-.partners {
-    background: var(--secondary-dark);
-    position: relative;
-    overflow: hidden;
-}
-
-.partners::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -10%;
-    width: 120%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
-    pointer-events: none;
-}
-
-.partner-showcase {
-    max-width: 900px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-}
-
-.partner-card {
-    background: linear-gradient(135deg, rgba(45, 45, 45, 0.9) 0%, rgba(26, 26, 26, 0.8) 100%);
-    border: 2px solid rgba(212, 175, 55, 0.3);
-    border-radius: 20px;
-    padding: 3rem;
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 3rem;
-    align-items: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-}
-
-.partner-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--accent-gold);
-    box-shadow: 0 15px 50px rgba(212, 175, 55, 0.2);
-}
-
-.partner-logo {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2rem;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(212, 175, 55, 0.2);
-    transition: all 0.3s ease;
-}
-
-.partner-card:hover .partner-logo {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: var(--accent-gold);
-}
-
-.partner-logo img {
-    max-width: 100%;
-    height: auto;
-    max-height: 150px;
-    object-fit: contain;
-    filter: brightness(1.1);
-}
-
-.partner-info h3 {
-    font-size: 2.2rem;
-    color: var(--accent-gold);
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.partner-tagline {
-    font-size: 1.1rem;
-    color: var(--accent-blue);
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    font-style: italic;
-}
-
-.partner-description {
-    color: var(--text-gray);
-    font-size: 1.05rem;
-    line-height: 1.8;
-}
-
-/* Responsive para la sección de socios */
-@media (max-width: 768px) {
-    .partner-card {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 2rem;
-        text-align: center;
-    }
-    
-    .partner-logo {
-        max-width: 200px;
-        margin: 0 auto;
     }
 }
